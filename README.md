@@ -1,7 +1,7 @@
 Flysystem Adapter Chain
 -----------------
 
-Adapter Chain, so the same method can be called in multiple adapters
+Adapter Chain for the [League\Flysystem](https://github.com/thephpleague/flysystem) filesystem abstraction, so the same method can be called in multiple adapters
 
 Code information:
 
