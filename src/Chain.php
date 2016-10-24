@@ -37,11 +37,11 @@ class Chain implements AdapterInterface
         $results = [];
 
         foreach ($this->adapters as $adapter) {
-            /** @var AdapterInterface $adapter */
+            /* @var AdapterInterface $adapter */
             $results[] = $adapter->write($path, $contents, $config);
         }
 
-        return array_unique($results) === [true];
+        return !in_array(false, $results);
     }
 
     /**

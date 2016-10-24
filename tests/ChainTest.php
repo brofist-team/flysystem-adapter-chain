@@ -50,8 +50,8 @@ class ChainTest extends PHPUnit_Framework_TestCase
     {
         $config = new Config();
 
-        $this->adapter1->write('foo', 'bar', $config)->willReturn(true);
-        $this->adapter2->write('foo', 'bar', $config)->willReturn(true);
+        $this->adapter1->write('foo', 'bar', $config)->willReturn(['foo']);
+        $this->adapter2->write('foo', 'bar', $config)->willReturn(['bar']);
 
         $return = $this->chain->write('foo', 'bar', $config);
 
@@ -66,7 +66,7 @@ class ChainTest extends PHPUnit_Framework_TestCase
         $config = new Config();
 
         $this->adapter1->write('foo', 'bar', $config)->willReturn(false);
-        $this->adapter2->write('foo', 'bar', $config)->willReturn(true);
+        $this->adapter2->write('foo', 'bar', $config)->willReturn(['foo']);
 
         $return = $this->chain->write('foo', 'bar', $config);
 
