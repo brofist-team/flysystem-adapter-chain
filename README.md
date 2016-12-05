@@ -48,7 +48,7 @@ composer require brofist/filesystem-adapter-chain
 
 [Here](https://github.com/brofist-team/flysystem-adapter-chain/issues) is the issue tracker.
 
-## Lincense
+## License
 
 [MIT](MIT-LICENSE)
 
